@@ -11,20 +11,20 @@
     tools:context="com.io.jees.blockchainapp.MainActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/et_hash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button"
+        android:layout_alignBottom="@+id/btn_search"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/button"
-        android:layout_toStartOf="@+id/button"
-        android:inputType="textPersonName"
+        android:layout_toLeftOf="@+id/btn_search"
+        android:layout_toStartOf="@+id/btn_search"
+        android:inputType="text"
         android:text="" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/et_hash"
         android:layout_marginTop="19dp"
         android:text="트랜젝션 수" />
 
