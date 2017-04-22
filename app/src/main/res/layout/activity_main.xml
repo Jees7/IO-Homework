@@ -44,32 +44,17 @@
         android:text="트랜젝션 수" />
 
     <TextView
-        android:id="@+id/tv_avg_tx_value"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_ntx"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="65dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/tv_avg_size"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tv_avg_tx_value"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="75dp"
-        android:text="TextView" />
+        android:layout_below="@+id/static_tv_ntx"
+        android:text="" />
 
     <TextView
         android:id="@+id/avg_tx_fee"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
@@ -86,17 +71,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:text="평균 트랜젝션 값" />
-
-    <TextView
-        android:id="@+id/tv_ntx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/static_tv_ntx"
-        android:text="TextView" />
 
     <TextView
         android:id="@+id/static_tv_avg_size"
@@ -135,6 +109,27 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:text="OUTPUT" />
+
+
+    <TextView
+        android:id="@+id/tv_avg_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/avg_tx_fee"
+        android:layout_marginTop="58dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_avg_tx_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_input"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="44dp"
+        android:text="TextView" />
 
 
 </RelativeLayout>

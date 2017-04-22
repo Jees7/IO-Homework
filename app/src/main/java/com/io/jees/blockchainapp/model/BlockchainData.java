@@ -1,28 +1,28 @@
 package com.io.jees.blockchainapp.model;
 
-import java.util.HashMap;
+
 
 public class BlockchainData {
 
-    private HashMap<String, Integer> hash;                                                          // <String of Hash, Integer of block_index>
-    private HashMap<String, Integer> prev_block;
+    private String hash;                                                          // <String of Hash, Integer of block_index>
+    private String prev_block;
     private int n_tx;
     private int size;
 
 
-    public HashMap<String, Integer> getHash() {
+    public String getHash() {
         return hash;
     }
 
-    public void setHash(HashMap<String, Integer> hash) {
+    public void setHash(String hash) {
         this.hash = hash;
     }
 
-    public HashMap<String, Integer> getPrev_block() {
+    public String getPrev_block() {
         return prev_block;
     }
 
-    public void setPrev_block(HashMap<String, Integer> prev_block) {
+    public void setPrev_block(String prev_block) {
         this.prev_block = prev_block;
     }
 
