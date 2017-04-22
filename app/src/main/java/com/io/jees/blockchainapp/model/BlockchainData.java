@@ -2,9 +2,9 @@ package com.io.jees.blockchainapp.model;
 
 import java.util.HashMap;
 
-public class Blockchain {
+public class BlockchainData {
 
-    private HashMap<String, Integer> hash;
+    private HashMap<String, Integer> hash;                                                          // <String of Hash, Integer of block_index>
     private HashMap<String, Integer> prev_block;
     private int n_tx;
     private int size;
