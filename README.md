@@ -3,10 +3,12 @@
 - IO-Homework 결과물 Android Application 입니다
 
 ## Usage
+![Image of Capture](https://c1.staticflickr.com/3/2949/33836097500_dc78684dca.jpg)
 - 블록체인의 정보를 추출하는 기능에는 다음 3가지가 있습니다
 >+ 트랜젝션의 수, 평균 값, 평균 수수료, 평균 크기를 출력하는 "SEARCH"
 >+ 트랜젝션의 INPUT 의 해당하는 정보를 출력하는 "INPUT"
 >+ 트랜젝션의 OUTPUT 의 해당하는 정보를 출력하는 "OUTPUT"
+
 
 ## Code
 
