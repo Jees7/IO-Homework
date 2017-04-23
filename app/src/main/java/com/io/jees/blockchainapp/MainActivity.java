@@ -24,14 +24,17 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
 
-    public  static final String urlSingleBlock = "https://blockchain.info/ko/rawblock/";                        // https://blockchain.info/ko/rawblock/$block_hash
-    public  static final String urlSingleTransaction = "https://blockchain.info/ko/rawtx/";                     // https://blockchain.info/ko/rawtx/$tx_hash
+    public static final String urlSingleBlock = "https://blockchain.info/ko/rawblock/";                        // https://blockchain.info/ko/rawblock/$block_hash
+    public static final String urlSingleTransaction = "https://blockchain.info/ko/rawtx/";                     // https://blockchain.info/ko/rawtx/$tx_hash
+
+    private static final int NONE = 0;
+    private static final int INPUT = 1;
+    private static final int OUTPUT = 2;
 
     Button.OnClickListener mClickListenerSearch = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
-            // get string of hash
+            // Get string of hash
             EditText hashText = (EditText) findViewById(R.id.et_hash);
             String hash = hashText.getText().toString();
 
