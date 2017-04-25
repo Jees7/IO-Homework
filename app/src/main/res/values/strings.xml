@@ -4,4 +4,8 @@
     <string name="input">Input</string>
     <string name="output">OUTPUT</string>
     <string name="blockchain_hash">Blockchain Hash :</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="devel_ver">Developer Version</string>
 </resources>
