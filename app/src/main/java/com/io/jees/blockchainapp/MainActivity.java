@@ -24,11 +24,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.io.jees.blockchainapp.helper.VolleyGsonHelper.urlSingleBlockApi;
+
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
 
-    public static final String urlSingleBlock = "https://blockchain.info/ko/rawblock/";                        // https://blockchain.info/ko/rawblock/$block_hash
-    public static final String urlSingleTransaction = "https://blockchain.info/ko/rawtx/";                     // https://blockchain.info/ko/rawtx/$tx_hash
+
 
     private static final int NONE = 0;
     private static final int INPUT = 1;
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     private void requestJsonObject(String hash, final int resultType) {
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        String url = urlSingleBlock + hash;
+        String url = urlSingleBlockApi + hash;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
