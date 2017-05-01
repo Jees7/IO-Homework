@@ -9,7 +9,6 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.io.jees.blockchainapp.fragment.HomeFragment;
-import com.io.jees.blockchainapp.helper.VolleyGsonHelper;
 
 /**
  * It is new layout activity used fragment
@@ -39,6 +38,6 @@ public class HomeActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.home_container, HomeFragment.newInstance(string, string)).commit();
 
-        VolleyGsonHelper.getInstance(mContext).getSingleBlock(hash);
+        //VolleyGsonHelper.getInstance(mContext).getSingleBlock(hash);
     }
 }

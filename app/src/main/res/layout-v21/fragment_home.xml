@@ -10,6 +10,7 @@
         style="@style/BlockchainApp.TextAppearance.Title"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
+        android:elevation="@dimen/elevation_header"
         android:gravity="center_vertical"
         android:paddingEnd="@dimen/spacing_double"
         android:paddingStart="@dimen/spacing_double"
