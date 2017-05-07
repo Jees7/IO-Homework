@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.io.jees.blockchainapp.fragment.HomeFragment;
@@ -27,10 +29,17 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        if (savedInstanceState == null) {
+            attachLatestListFragment();
+        } else {
+            //
+        }
 
         String string = "The test fragment for new layout";
         String hash = "0000000000000bae09a7a393a8acded75aa67e46cb81f7acaa5ad94f9eacd103";
@@ -39,5 +48,17 @@ public class HomeActivity extends AppCompatActivity {
                 .replace(R.id.home_container, HomeFragment.newInstance(string, string)).commit();
 
         //VolleyGsonHelper.getInstance(mContext).getSingleBlock(hash);
+    }
+
+    private void attachLatestListFragment() {
+        FragmentManager supportFragmentManager = getSupportFragmentManager();
+        Fragment fragment = supportFragmentManager.findFragmentById(R.id.home_container);
+
+        if (!(fragment instanceof HomeFragment)) {
+            fragment = HomeFragment.newInstance();
+        }
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.home_container, fragment)
+                .commit();
     }
 }

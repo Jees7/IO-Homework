@@ -33,7 +33,8 @@ public class LatestAdapter extends RecyclerView.Adapter<LatestAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_latest_block, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_latest_block, parent, false);
         return new ViewHolder(view);
 
         /* return new ViewHolder((ItemCategoryBinding) DataBindingUtil
@@ -65,5 +66,4 @@ public class LatestAdapter extends RecyclerView.Adapter<LatestAdapter.ViewHolder
             textRelay = (TextView) view.findViewById(R.id.block_from_relay);
         }
     }
-
 }
