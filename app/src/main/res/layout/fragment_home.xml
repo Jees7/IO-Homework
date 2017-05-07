@@ -24,4 +24,11 @@
         android:textAppearance="@android:style/TextAppearance.Small"
         android:textColor="?android:attr/textColorHint" />
 
+    <android.support.v7.widget.RecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/latest_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"></android.support.v7.widget.RecyclerView>
+
+
 </LinearLayout>

@@ -11,7 +11,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.io.jees.blockchainapp.model.BlockchainData;
+import com.io.jees.blockchainapp.model.Block;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,14 +23,12 @@ import java.util.List;
  */
 
 public class VolleyGsonHelper {
-    private static final String TAG = "VolleyGsonHelper";
-
-    private static VolleyGsonHelper mInstance;
-    private RequestQueue mRequestQueue;
-    private static Context mContext;
-
     public static final String urlSingleBlockApi = "https://blockchain.info/ko/rawblock/";                        // https://blockchain.info/ko/rawblock/$block_hash
     public static final String urlSingleTransactionApi = "https://blockchain.info/ko/rawtx/";                     // https://blockchain.info/ko/rawtx/$tx_hash
+    private static final String TAG = "VolleyGsonHelper";
+    private static VolleyGsonHelper mInstance;
+    private static Context mContext;
+    private RequestQueue mRequestQueue;
 
     private VolleyGsonHelper(Context context) {
         mContext = context;
@@ -74,8 +72,8 @@ public class VolleyGsonHelper {
                 // JSON parsing used GSON
                 GsonBuilder builder = new GsonBuilder();
                 Gson mGson = builder.create();
-                List<BlockchainData> datas = new ArrayList<BlockchainData>();
-                datas = Arrays.asList(mGson.fromJson(response, BlockchainData.class));
+                List<Block> datas = new ArrayList<Block>();
+                datas = Arrays.asList(mGson.fromJson(response, Block.class));
 
                 //Log.d(TAG, "size " + posts.get(0).getSize());
             }

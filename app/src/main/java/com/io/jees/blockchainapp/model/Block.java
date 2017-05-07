@@ -3,7 +3,7 @@ package com.io.jees.blockchainapp.model;
 
 import java.util.List;
 
-public class BlockchainData {
+public class Block {
 
     /**
      * hash : 0000000000000bae09a7a393a8acded75aa67e46cb81f7acaa5ad94f9eacd103

@@ -18,7 +18,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.io.jees.blockchainapp.model.BlockchainData;
+import com.io.jees.blockchainapp.model.Block;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -94,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
                 // JSON parsing used GSON
                 GsonBuilder builder = new GsonBuilder();
                 Gson mGson = builder.create();
-                List<BlockchainData> datas = new ArrayList<BlockchainData>();
-                datas = Arrays.asList(mGson.fromJson(response, BlockchainData.class));
+                List<Block> datas = new ArrayList<Block>();
+                datas = Arrays.asList(mGson.fromJson(response, Block.class));
 
                 showResult(datas, resultType);
                 //Log.d(TAG, "size " + posts.get(0).getSize());
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         queue.add(stringRequest);
     }
 
-    private void showResult(List<BlockchainData> datas, int showType) {
+    private void showResult(List<Block> datas, int showType) {
         int nTx = datas.get(0).getN_tx();
         float avgTxValue = datas.get(0).getBits() / nTx;
         float avgTxFee = datas.get(0).getFee() / nTx;

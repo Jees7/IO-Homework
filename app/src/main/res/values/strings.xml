@@ -10,4 +10,8 @@
     <string name="devel_ver">Developer Version</string>
     <string name="blockchain_hash_text">Address / ip / SHA hash</string>
     <string name="search_text">수색</string>
+    <string name="block_height">블록 높이</string>
+    <string name="block_date">시각</string>
+    <string name="block_hash">해시</string>
+    <string name="block_from_relay">릴레이된 곳</string>
 </resources>
